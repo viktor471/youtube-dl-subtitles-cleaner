@@ -1,0 +1,8 @@
+test.py
+venv
+.idea
+*.vtt
+*.swo
+*.swp
+*.orij
+__pycache__
