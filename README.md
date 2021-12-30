@@ -23,7 +23,7 @@ difference<00:00:04.609><c> between</c><00:00:04.819><c> static</c><00:00:05.420
 difference between static websites and
 ```
 
-I don't know why file has data like <00:00:04.609> or <c> and </c> tag like parts, alignment label. I coudn't find hot to get rid of this unnecessary and unuseful data, so I also added a function to remove this data to my code (delete_service_data.py). Besides you can see that text containes duplicate lines. Altough in the upper text this is not so obvious due to the service data like extra timecodes and some other things, but there are duplicates. Therefore I added script "delete_duplicate_string.py" that cleans duplicates. main.py does the both actions.
+I don't know why file has data like `<00:00:04.609>` or `<c>` and `</c>` tag like parts, alignment label. I coudn't find hot to simply get rid of this unnecessary and unuseful data, so I also added a function to remove this data to my code (`delete_service_data.py`). Besides you can see that text containes duplicate lines. Altough in the upper text this is not so obvious due to the service data like extra timecodes and some other things, but there are duplicates. Therefore I added script "`delete_duplicate_string.py`" that cleans duplicates. main.py does the both actions.
 
 ## How to use it
 
