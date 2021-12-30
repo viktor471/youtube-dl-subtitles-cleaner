@@ -3,6 +3,7 @@ import ntpath
 
 
 def get_input_file_name(argv=sys.argv) -> str:
+    """Get input file name from 1st argument"""
     if len(argv) > 1:
         return argv[1]
     else:
@@ -10,6 +11,7 @@ def get_input_file_name(argv=sys.argv) -> str:
 
 
 def get_output_file_name(argv=sys.argv) -> str:
+    """Get output file name. It will generated from input file name or got from 2nd argument"""
     if len(argv) < 3:
         return "output_" + ntpath.basename(get_input_file_name())
     else:

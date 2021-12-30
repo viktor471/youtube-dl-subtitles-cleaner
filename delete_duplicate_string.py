@@ -5,10 +5,12 @@ import work_with_files as files
 
 
 def is_empty_line(line: str):
+    """Check if line is empty. Returnes True if line contains only whitespaces"""
     return bool(re.match(r"\s*\n", line))
 
 
 def is_time_code(line: str):
+    """Check if line has timecode. Returnes True if line contain timecode"""
     time = r"\d{2}:\d{2}:\d{2}\.\d{3}"
     return bool(re.match(time + r"\s*-->\s*" + time + r"\s*\n", line))
 
@@ -18,6 +20,14 @@ def is_suitable_line(line: str):
 
 
 def delete_duplicate_lines(input_text: list) -> list:
+    """Take list with lines from read file and returnes list of lines without duplicates and extra timecodes
+
+    Args:
+        input_text (list): lines from the read file and processed with the help delete_service_data.py script
+
+    Returns:
+        list: list without duplicates and extra timecodes
+    """
     found_lines = set()
     output_text = list(input_text)
 

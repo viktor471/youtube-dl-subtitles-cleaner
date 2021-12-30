@@ -4,11 +4,21 @@ import re
 import work_with_files as files
 
 
-def delete_matches(pattern: str, line: str):
+def delete_matches(pattern: str, line: str) -> str:
+    """Replace matches that matches pattern with empty string
+
+    Args:
+        pattern (str): regex for search
+        line (str): editable line
+
+    Returns:
+        str: string with deleted matches
+    """
     return re.sub(pattern, "", line)
 
 
 def delete_extra_service_data(text: list):
+    """Delete service data from text"""
     output = []
     for line in text:
         line = delete_matches(r"<c>", line)
