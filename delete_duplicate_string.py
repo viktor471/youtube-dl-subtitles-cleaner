@@ -56,8 +56,6 @@ def delete_duplicate_lines(input_text: list) -> list:
                 output_text.pop(index)
 
     for index, chunk in get_chunk(output_text):
-        print("index:", index)
-        print("chunk:", chunk)
         if is_empty_timecode(chunk):
             del_chunk_with_index(index, output_text)
 
